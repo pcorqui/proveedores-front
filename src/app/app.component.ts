@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { routes } from './app.routes';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'prooveedores';
+  title = 'e-Commerce Gapsi';
+
+  constructor(private routes: Router){
+
+  }
+
+
+  public listaProveedores(){
+    this.routes.navigate(['/crear']);
+    console.log("algo haces");
+  }
 }
